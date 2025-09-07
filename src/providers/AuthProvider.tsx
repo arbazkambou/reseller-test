@@ -19,9 +19,12 @@ function AuthCheck() {
 
     (async () => {
       try {
-        const res = await fetch(`https://dev.esimcard.com/api/landing/user`, {
-          headers: { Authorization: `Bearer ${token}` },
-        });
+        const res = await fetch(
+          `https://portal.esimcard.com/api/landing/user`,
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          }
+        );
 
         if (!res.ok) {
           await signOut({ callbackUrl: "/login" });
