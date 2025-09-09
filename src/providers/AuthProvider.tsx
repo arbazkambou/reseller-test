@@ -20,7 +20,7 @@ function AuthCheck() {
     (async () => {
       try {
         const res = await fetch(
-          `https://portal.esimcard.com/api/landing/user`,
+          `https://dev.esimcard.com/api/landing/user`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
